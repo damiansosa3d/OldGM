@@ -1,3 +1,18 @@
+<h1>Old GMs - NES Emulator</h1>
+
+<label for="gameSelect">Seleccioná un juego:</label>
+<select id="gameSelect">
+  <option value="demo.nes">Demo</option>
+  <option value="mario.nes">Super Mario</option>
+  <option value="contra.nes">Contra</option>
+  <option value="zelda.nes">Zelda</option>
+</select>
+<button onclick="loadSelectedROM()">Cargar Juego</button>
+
+<div id="emulator-container">
+  <canvas id="nes-canvas" width="256" height="240"></canvas>
+</div>
+
 
 <!DOCTYPE html>
 <html lang="es">
