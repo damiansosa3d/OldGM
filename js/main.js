@@ -25,7 +25,6 @@ function loadSelectedROM() {
     });
 }
 
-
 function startEmulator() {
   setInterval(() => nes.frame(), 1000 / 60);
 }
