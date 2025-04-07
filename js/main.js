@@ -22,6 +22,8 @@ fetch('roms/demo.nes')
     startEmulator();
   });
 
+  });
+
 function startEmulator() {
   setInterval(() => nes.frame(), 1000 / 60);
 }
