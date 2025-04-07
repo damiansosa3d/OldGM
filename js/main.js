@@ -15,14 +15,16 @@ const nes = new jsnes.NES({
   },
 });
 
-fetch('roms/demo.nes')
-  .then(res => res.arrayBuffer())
-  .then(buffer => {
-    nes.loadROM(buffer);
-    startEmulator();
-  });
+function loadSelectedROM() {
+  const game = document.getElementById('gameSelect').value;
+  fetch('roms/' + game)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      nes.loadROM(buffer);
+      startEmulator();
+    });
+}
 
-  });
 
 function startEmulator() {
   setInterval(() => nes.frame(), 1000 / 60);
